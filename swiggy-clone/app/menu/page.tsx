@@ -131,6 +131,17 @@ export default function MenuPage() {
                         </button>
                     </div>
 
+                    <div className="mobile-category-bar">
+                        <button className={`mobile-category-pill ${!activeCategory ? "active" : ""}`} onClick={() => setActiveCategory(null)}>
+                            <span>📜</span> {t("codex_all")}
+                        </button>
+                        {categories.map((cat) => (
+                            <button key={cat.id} className={`mobile-category-pill ${activeCategory === cat.id ? "active" : ""}`} onClick={() => scrollToCategory(cat.id)}>
+                                <span>{cat.icon}</span> {t("cat_" + cat.id)}
+                            </button>
+                        ))}
+                    </div>
+
                     <AnimatePresence>
                         {sortedGroups.length === 0 ? (
                             <div style={{ padding: "60px 0", textAlign: "center", color: "var(--text-muted)" }}>

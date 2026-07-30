@@ -23,8 +23,8 @@ export default function HomePage() {
       <HeroSection />
 
       {/* ── About ── */}
-      <section id="about" style={{ background: "var(--bg-card)", borderTop: "1px solid var(--border-strong)", borderBottom: "1px solid var(--border-strong)", padding: "90px 32px" }}>
-        <div style={{ maxWidth: 1300, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 72, alignItems: "center" }}>
+      <section id="about" className="about-section">
+        <div className="about-grid">
           {/* Image collage */}
           <div style={{ position: "relative" }}>
             <div style={{ border: "1px solid var(--border-strong)", overflow: "hidden", height: 440 }}>
@@ -38,7 +38,7 @@ export default function HomePage() {
               <div style={{ fontFamily: "'IM Fell English', serif", fontStyle: "italic", fontSize: "0.85rem", color: "var(--text-muted)", marginTop: 2 }}>{t("about_img_tagline")}</div>
             </div>
             <div style={{ position: "absolute", top: 24, right: -32, width: 120, height: 120, border: "1px solid var(--border-strong)", overflow: "hidden", boxShadow: "var(--shadow-card)" }}>
-              <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=240&q=85&fit=crop"
+              <img src="https://images.unsplash.com/photo-1555396273-367ea4db4db5?w=240&q=85&fit=crop"
                 alt="Agora ambiance" style={{ width: "100%", height: "100%", objectFit: "cover", filter: "sepia(15%)" }} />
             </div>
           </div>
